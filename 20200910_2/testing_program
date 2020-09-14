@@ -1,0 +1,6 @@
+python3 second_task.py < input_1.txt > real_output.txt
+diff -u real_output.txt test_output_1.txt
+python3 second_task.py < input_2.txt > real_output.txt
+diff -u real_output.txt test_output_2.txt
+python3 second_task.py < input_3.txt > real_output.txt
+diff -u real_output.txt test_output_3.txt
