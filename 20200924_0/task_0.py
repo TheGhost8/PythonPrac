@@ -1,8 +1,6 @@
-i = 3
-while i <= 6:
-	j = 3
-	while j <= 6:
+for i in range(3, 7):
+	for j in range(3, 7):
 		print(i, ' * ', j, ' = ', i*j, '    ', end='') if i * j != 6 else print(i, ' * ', j, ' = :3=', '    ', end='')
-		j += 1
-	print()
-	i += 1
+		if i*j < 10:
+			print(' ', end='')
+	print() 

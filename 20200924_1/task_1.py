@@ -1,0 +1,1 @@
+print([i for i in range(1, (int)(input())) if all([i%j for j in range(2, i)])])
