@@ -3,10 +3,10 @@ l = []
 while s:
 	l.append(s)
 	s = input()
-for i in range(len(l)):
+for i in enumerate(l):
 	unique = True
-	for j in range(len(l)):
-		if (i != j) and (set(l[i]) & set(l[j])):
+	for j in enumerate(l):
+		if (i != j) and (set(i[1]) & set(j[1])):
 			unique = False
 	if unique:
-		print(l[i])
+		print(i[1])
