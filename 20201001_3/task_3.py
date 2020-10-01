@@ -10,4 +10,4 @@ def Calc(s, t, u):
 	return Res
 
 Fun = Calc(input(), input(), input())
-print(Fun(1), Fun(2))
+print(Fun(100), Fun(0.1))
