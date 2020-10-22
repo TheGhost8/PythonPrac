@@ -1,0 +1,1 @@
+Program (input() itself) works only with english letters.
