@@ -1,9 +1,10 @@
+import sys
 from random import *
 
-#a = {'a':1,'b':2}
-#print(a[list(a.keys())[1]])
+if len(sys.argv) > 2:
+	seed(sys.argv[2])
 
-n = (int)(input())
+n = (int)(sys.argv[1])
 s = input()
 all_pairs = {}
 while s:
@@ -20,5 +21,5 @@ while s:
 password = ""
 while len(password) < n:
 	password += list(all_pairs.keys())[choices(range(len(all_pairs.keys())), [all_pairs[i] for i in all_pairs])[0]]
-	#password += choices(all_pairs.keys(), [all_pairs[i] for i in all_pairs])
+
 print(password)
