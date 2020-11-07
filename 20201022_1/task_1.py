@@ -1,16 +1,14 @@
-def fib_pow(m, n, p=1):
-	x1, x2 = 1, 1
+def fib(m, n):
+	x1, x2 = 0, 1
 	i = 2
 	while i < m:
 		x1, x2 = x2, x2+x1
 		i += 1
-	while i <= n:
-		p = yield x2**p
+	while i <= n+1:
+		yield x1
 		x1, x2 = x2, x2+x1
 		i += 1
 
-m, n, p = eval(input())
-f = fib_pow(m,n,p)
-print(next(f))
-for i in range(3):
-	print(f.send(2))
+m, n = eval(input())
+f = fib(m, n)
+print(*f)

@@ -1,3 +1,5 @@
+from itertools import tee, islice
+
 def even(seq):
 	for i in seq:
 		if i % 2 == 0:
