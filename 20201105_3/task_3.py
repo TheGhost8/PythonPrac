@@ -1,3 +1,3 @@
-from re import sub
+from re import sub, search
 
-print(sub(r"(0[1-9]{2,4}(?=0))", r"", input()))
+print(sub(r"(?<=0)([1-9]{2,4})(?=0)(0*)(?<=0)([1-9]{2,4})(?=0)", r"\3\2\1",input()))
