@@ -1,0 +1,6 @@
+@count_calls
+def flex():
+	print('flex')
+
+for i in range(3):
+	flex()

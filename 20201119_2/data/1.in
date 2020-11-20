@@ -1,0 +1,9 @@
+c = C('obj')
+c.data = 100500
+print(c.data)
+c.data = ['abc','123','q']
+print(c.data)
+c.data = 'sdadasd'
+print(c.data)
+c.data = range(2,111,3)
+print(c.data)
