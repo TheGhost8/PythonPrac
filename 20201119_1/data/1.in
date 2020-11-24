@@ -1,4 +1,4 @@
-@count_calls
+@deccount
 def flex():
 	print('flex')
 

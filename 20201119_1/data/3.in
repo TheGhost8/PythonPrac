@@ -1,0 +1,14 @@
+@deccount
+def fun1():
+        @deccount
+        def fun2():
+                print('second flex')
+        print('first flex')
+        return fun2
+        
+a = fun1()
+a()
+a()
+b = [fun1(), a]
+b[0]()
+b[1]()

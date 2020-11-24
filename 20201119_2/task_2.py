@@ -1,22 +1,22 @@
-class Dsc:
+class Num:
 	def __get__(self, obj, cls):
-		return obj._value
-
-	def __set__(self, obj, val):
 		try:
-			obj._value = len(val)
+			return obj._num
+		except AttributeError:
+			return 0
+
+	def __set__(self, obj, value):
+		try:
+			obj._num = len(value)
+			obj._num = value.real
 		except TypeError:
-			obj._value = val
-		
+			obj._num = value
+		except AttributeError:
+			obj._num = len(value)
 
-class C:
-	data = Dsc()
+	def __delete__(self, obj):
+		obj._num = None
 
-	def __init__(self, name):
-		self.name = name
-
-	def __str__(self):
-		return f"<{self.name}>"
 
 import sys
 exec(sys.stdin.read())
