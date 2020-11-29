@@ -1,5 +1,5 @@
 import sys
 
-text = sys.argv[1]
+text = sys.stdin.read()
 
-print(text.decode('latin1').decode('CP1251'))
+print(text.encode('latin1', errors='replace').decode('CP1251', errors='replace'))
