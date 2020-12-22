@@ -1,0 +1,14 @@
+class C(metaclass=dump):
+    def __init__(self, val):
+        self.val = val
+
+    def print_everything(self, a=10, *params, **key_params):
+        print('positional_passed: ', *params)
+        print('key_passed: ', end='')
+        for i in key_params:
+            print(i, ':', key_params[i], end=' ')
+        print()
+
+c = C(10)
+c.print_everything(1, 2, key=3)
+c.print_everything(9, another=10, **{str(i)+'_str':i for i in range(7)})

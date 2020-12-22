@@ -23,8 +23,5 @@ class C(metaclass=dump):
     def add(self, other, another=None):
         return self.val + other + (another or self.val)
 
-#c = C(10)
-#print(c.add(9))
-#print(c.add(9,another=10))
 import sys
 exec(sys.stdin.read())

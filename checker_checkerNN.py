@@ -41,7 +41,7 @@ TDIRS: list = ["tests", "data", "."]
 TINOUTS: list = [("in", "out"), ("dat", "res")]
 TPATTS: list = ["[0-9]*.E", "E*.[0-9]*", "test*[0-9].E"]
 RLIMIT_AS: int = 1024*1024*512
-TMOUT: float = 5
+TMOUT: float = 1
 MAXDIFF: int = 80
 
 # XXX check if subprocess dies first

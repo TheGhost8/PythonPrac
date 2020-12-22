@@ -1,0 +1,15 @@
+class A:
+    s: str
+
+    def __init__(self, *args, **kwargs):
+        s = args[0]
+
+class C(metaclass=check):
+    abc: A
+
+c = C()
+print(c.check_annotations())
+c.abc = A('a')
+print(c.check_annotations())
+c.abc = 'flex'
+print(c.check_annotations())

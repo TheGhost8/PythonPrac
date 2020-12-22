@@ -1,0 +1,7 @@
+__init__: (10,), {}
+print_everything: (0, 1, 2, 3, 4, 5, 6, 7, 8, 9), {}
+positional:  0 1 2 3 4 5 6 7 8 9
+key: 
+print_everything: (9,), {'another': 10}
+positional:  9
+key: another : 10 

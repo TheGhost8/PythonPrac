@@ -1,0 +1,16 @@
+import types
+
+class C(metaclass=check):
+    a: str
+    b: types.BuiltinFunctionType = print
+    c: types.MethodType = lambda x: x
+
+c = C()
+print(c.check_annotations())
+c.a = 'a'
+print(c.check_annotations())
+c.b = getattr(c, 'check_annotations')
+print(c.check_annotations())
+c.b = print
+c.c = 23
+print(c.check_annotations())
