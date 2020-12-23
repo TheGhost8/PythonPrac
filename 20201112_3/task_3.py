@@ -7,7 +7,7 @@ while True:
 			raise ValueError('WrongTriangle')
 		print("{0:.2f}".format(area))
 		break
-	except (ValueError, NameError, TypeError) as e:
+	except (ValueError, NameError, TypeError, ZeroDivisionError, SyntaxError) as e:
 		if str(e) == 'WrongTriangle':
 			print('Not a triangle')
 		else:
