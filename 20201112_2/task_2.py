@@ -1,4 +1,7 @@
 class nestr(str):
+	def __pos__(self):
+		return nestr(self)
+
 	def __neg__(self):
 		return nestr(self[::-1])
 
