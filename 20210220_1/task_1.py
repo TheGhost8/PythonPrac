@@ -1,21 +1,18 @@
-import time
 import tkinter as tk
 
 class Application(tk.Frame):
-	def __init__(self, master=None):
-		tk.Frame.__init__(self, master)
-		self.grid()
-		self.createWidgets()
-		self.showtime()
+    def __init__(self, master=None):
+        tk.Frame.__init__(self, master)
+        self.grid()
+        self.createWidgets()
 
-	def showtime(self):
-		self.time.set(time.strftime("%c"))
-
-	def createWidgets(self):
-		self.timeButton = tk.Button(self, text='Time', command=self.showtime)
-		self.quitButton = tk.Button(self, text='Quit', command=self.quit)
-		self.timeLabel = tk.Label(self, textvariable=self.time)
-		self.quitButton.grid()
+    def createWidgets(self):
+        self.timeButton = tk.Button(self, text='Time')
+        self.timeButton.grid()
+        self.quitButton = tk.Button(self, text='Quit', command=self.quit)
+        self.quitButton.grid()
+        self.timeLabel = tk.Label(self, text='Time to flex!')
+        self.timeLabel.grid()
 
 app = Application()
 app.master.title('Sample application')
