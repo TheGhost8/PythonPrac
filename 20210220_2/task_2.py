@@ -7,15 +7,22 @@ class Application(tk.Frame):
 		self.grid()
 		self.createWidgets()
 
+	def dirText(self):
+		self.text.set(subprocess.run(['dir'], capture_output=True).stdout)
+
+	def dateText(self):
+		self.text.set(subprocess.run(['date'], capture_output=True).stdout)
+
+	def gitText(self):
+		self.text.set(subprocess.run(['git'], capture_output=True).stdout)
+
 	def createWidgets(self):
-		self.dir = tk.StringVar()
-		#self.date = 
-		#self.git = 
-		self.dirButton = tk.Button(self, text='dir')
-		self.dateButton = tk.Button(self, text='date')
-		self.gitButton = tk.Button(self, text='git')
+		self.text = tk.StringVar()
+		self.dirButton = tk.Button(self, text='dir', command=self.dirText)
+		self.dateButton = tk.Button(self, text='date', command=self.dateText)
+		self.gitButton = tk.Button(self, text='git', command=self.gitText)
 		self.quitButton = tk.Button(self, text='Quit', command=self.quit)
-		self.Label = tk.Label(self, text=subprocess.run(["dir"], capture_output=True).stdout)
+		self.Label = tk.Label(self, textvariable=self.text)
 		self.dirButton.grid(row=0, column=0)
 		self.dateButton.grid(row=0, column=1)
 		self.gitButton.grid(row=0, column=2)
