@@ -21,7 +21,7 @@ class Application(tk.Frame):
 		self.timeLabel.grid(columnspan=2)
 
 app = Application()
-app.master.title('Sample application')
+app.master.title('Sample timer application')
 app.mainloop()
 
 '''
