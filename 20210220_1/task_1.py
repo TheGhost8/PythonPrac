@@ -19,6 +19,8 @@ class Application(tk.Frame):
 		self.timeLabel = tk.Label(self)
 		self.showtime()
 		self.timeLabel.grid()
+		self.quitButton.grid(row=0, column=1)
+		self.timeLabel.grid(columnspan=2)
 
 app = Application()
 app.master.title('Sample application')
