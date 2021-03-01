@@ -8,13 +8,13 @@ class Application(tk.Frame):
 		self.createWidgets()
 
 	def quitButton(self):
-		"""<docstring> Plug for exit button"""
+		"""Handler for exit button."""
 		pass
 
 
 	def createWidgets(self):
-		#self.quitButton = tk.Button(self, text='Quit', command=quitButton)
-		#self.quitButton.grid()
+		self.quitButton = tk.Button(self, text='Quit', command=self.quitButton)
+		self.quitButton.grid()
 		pass
 
 app = Application()
