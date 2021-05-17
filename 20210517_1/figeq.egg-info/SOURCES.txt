@@ -1,0 +1,10 @@
+pyproject.toml
+setup.cfg
+figeq/__init__.py
+figeq/__main__.py
+figeq/dodo.py
+figeq.egg-info/PKG-INFO
+figeq.egg-info/SOURCES.txt
+figeq.egg-info/dependency_links.txt
+figeq.egg-info/requires.txt
+figeq.egg-info/top_level.txt
